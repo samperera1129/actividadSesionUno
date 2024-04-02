@@ -8,14 +8,14 @@ const total = resultados(ordenes, previsto, diaMes);
 function resultados(ordenes, previsto, diaMes) {
   let mensaje = '';
 
-  // ¿Incrementar capacidad para mañana? ¡supera monto previsto?
+  // ¿Incrementar capacidad para mañana? ¿supera monto previsto?
   if (previsto < ordenes) {
     mensaje = '\n El numero de ordenes fue mayor que las previstas, hay que incrementar la capacidad para mañana.'
   } else {
     mensaje = '\n El numero de ordenes fue menor o igual a las previstas, mantener la misma capacidad.'
   }
 
-  // ¿Par o impar? (movido fuera de la condición anterior)
+  // ¿Par o impar? 
   if (diaMes % 2 !== 0 && ordenes > previsto) {
     mensaje += '\n Hoy es un dia impar. Las ordenes reales superaron las previstas.';
   }
@@ -28,6 +28,3 @@ function resultados(ordenes, previsto, diaMes) {
 }
 
 console.log(total);
-
-  
-  
